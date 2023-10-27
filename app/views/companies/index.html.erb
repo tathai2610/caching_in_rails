@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<%# <% cache('companies_table') do %>
+<div id="companies">
+  <% @companies.each do |company| %>
+    <%# <% cache company do %>
+    <%= render company %>
+    <%# <% end %>
+    <p>
+      <%= link_to "Show this company", company %>
+    </p>
+  <% end %>
+</div>
+<%# <% end %>
+
+<%= link_to "New company", new_company_path %>
