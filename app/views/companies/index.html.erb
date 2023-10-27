@@ -15,4 +15,8 @@
 </div>
 <%# <% end %>
 
+<%# Russian Doll caching %>
+<%= render partial: 'companies/company', collection: @companies, cached: true %>
+
+
 <%= link_to "New company", new_company_path %>
