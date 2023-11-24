@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies or /companies.json
   def index
     @companies = Company.all
+    fresh_when @companies # apply HTTP caching
   end
 
   # GET /companies/1 or /companies/1.json
